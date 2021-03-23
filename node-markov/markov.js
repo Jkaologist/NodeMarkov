@@ -7,7 +7,7 @@ class MarkovMachine {
 
   constructor(text) {
     let words = text.split(/[ \r\n]+/);
-    // MORE CODE HERE
+    this.words = words
   }
 
   /** set markov chains:
@@ -16,9 +16,16 @@ class MarkovMachine {
    *  {"the": ["cat", "hat"], "cat": ["in"], "in": ["the"], "hat": [null]} */
 
   makeChains() {
-    // MORE CODE HERE
+    let obj = {};
+    for (let i = 0; i < this.words.length; i++) {
+      if (this.words[i] in obj) {
+        obj[this.words[i]].push(this.words[i+1]);
+      } else {
+       obj[this.words[i]] = [this.words[i+1] || null];
+      }    
+    }
+    return obj;
   }
-
 
   /** return random text from chains */
 
@@ -26,3 +33,7 @@ class MarkovMachine {
     // MORE CODE HERE
   }
 }
+
+module.exports= {
+  MarkovMachine
+};

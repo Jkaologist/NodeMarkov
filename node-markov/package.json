@@ -1,11 +1,12 @@
 {
-  "name": "nodemarkov",
+  "name": "node-markov",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "makeText.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
